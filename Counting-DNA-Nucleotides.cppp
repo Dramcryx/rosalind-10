@@ -1,0 +1,13 @@
+#include <unordered_map>
+#include <iostream>
+int main()
+{
+    std::unordered_map<char, int> counter { {'A', 0}, {'T', 0}, {'C', 0}, {'G', 0} };
+    char c = '\0';
+    while (std::cin >> c)
+    {
+        ++counter[c];
+    }
+    std::cout << counter['A'] << ' ' << counter['C'] << ' ' << counter['G'] << ' ' << counter['T'] << "\n";
+    return 0;
+}
